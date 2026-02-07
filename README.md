@@ -1,0 +1,1 @@
+# Guneri_teknik2
