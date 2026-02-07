@@ -27,13 +27,6 @@ header {
     z-index: 1000;
 }
 
-header .logo {
-    float: left;
-    font-size: 24px;
-    font-weight: 700;
-    color: #1a2a6c;
-}
-
 header .logo span {
     color: #f06105;
 }
