@@ -160,3 +160,35 @@ footer {
 }
 
 .footer-
+/* Logo + Yazı Alanı */
+.logo-area {
+    float: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-area img {
+    height: 45px;
+    width: auto;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a2a6c;
+    line-height: 1;
+}
+
+.logo-text span {
+    color: #f06105;
+}
+
+/* Mobil */
+@media (max-width: 768px) {
+    .logo-area {
+        justify-content: center;
+        float: none;
+        margin-bottom: 10px;
+    }
+}
