@@ -15,6 +15,7 @@ body {
 .container {
     width: 85%;
     margin: auto;
+    overflow: hidden;
 }
 
 /* Header */
@@ -27,6 +28,17 @@ header {
     z-index: 1000;
 }
 
+header .logo {
+    float: left;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a2a6c;
+}
+
+header .logo span {
+    color: #f06105;
+}
+
 header nav {
     float: right;
     margin-top: 5px;
@@ -37,7 +49,7 @@ header nav ul {
 }
 
 header nav ul li {
-    display: inline-block;
+    display: inline;
     margin-left: 20px;
 }
 
@@ -54,35 +66,22 @@ header nav ul li a {
     border-radius: 5px;
 }
 
-/* HERO SECTION (DÜZELTİLDİ) */
+/* Hero Section */
 .hero {
-    position: relative;
-    min-height: calc(100vh - 80px); /* header çakışması çözümü */
+    background: linear-gradient(rgba(26, 42, 108, 0.7), rgba(26, 42, 108, 0.7)), 
+                url('https://images.unsplash.com/photo-1581094288338-2314dddb7bc3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    color: #fff;
     display: flex;
     align-items: center;
     text-align: center;
-    color: #fff;
-
-    background-image:
-        linear-gradient(rgba(26, 42, 108, 0.65), rgba(26, 42, 108, 0.65)),
-        url("https://hizliresim.com/ip7kf3n");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.hero .container {
-    position: relative;
-    z-index: 2;
 }
 
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1.2rem;
 }
 
 .cta-button {
@@ -91,14 +90,9 @@ header nav ul li a {
     color: #fff;
     padding: 15px 30px;
     text-decoration: none;
-    border-radius: 30px;
+    border-radius: 5px;
     margin-top: 20px;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.cta-button:hover {
-    background: #e65f00;
+    font-weight: bold;
 }
 
 /* Brands Area */
@@ -114,7 +108,7 @@ header nav ul li a {
 }
 
 /* Sections */
-section:not(.hero) {
+section {
     padding: 80px 0;
 }
 
@@ -148,38 +142,37 @@ footer {
     padding: 50px 0;
 }
 
-.footer-
-/* Logo + Yazı Alanı */
-.logo-area {
-    float: left;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
 }
 
-.logo-area img {
-    height: 40px;      
-    max-height: 40px;
-    width: auto;
-    object-fit: contain;
+.footer-col h4 {
+    margin-bottom: 20px;
 }
 
-.logo-text {
-    font-size: 24px;
-    font-weight: 700;
-    color: #1a2a6c;
-    line-height: 1;
+.footer-col ul {
+    list-style: none;
 }
 
-.logo-text span {
-    color: #f06105;
+.footer-col a {
+    color: #ccc;
+    text-decoration: none;
 }
 
-/* Mobil */
+/* Mobile Responsive */
 @media (max-width: 768px) {
-    .logo-area {
-        justify-content: center;
+    header .logo, header nav {
         float: none;
-        margin-bottom: 10px;
+        text-align: center;
+        display: block;
+    }
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    .hero h1 {
+        font-size: 2rem;
     }
 }
