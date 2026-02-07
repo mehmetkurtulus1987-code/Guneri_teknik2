@@ -15,7 +15,6 @@ body {
 .container {
     width: 85%;
     margin: auto;
-    overflow: hidden;
 }
 
 /* Header */
@@ -49,7 +48,7 @@ header nav ul {
 }
 
 header nav ul li {
-    display: inline;
+    display: inline-block;
     margin-left: 20px;
 }
 
@@ -66,22 +65,35 @@ header nav ul li a {
     border-radius: 5px;
 }
 
-/* Hero Section */
+/* HERO SECTION (DÜZELTİLDİ) */
 .hero {
-    background: linear-gradient(rgba(26, 42, 108, 0.7), rgba(26, 42, 108, 0.7)), 
-                url('https://image2url.com/r2/default/images/1770467499425-daf2095f-12c4-4add-a35a-f3b998b96870.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 80vh;
-    color: #fff;
+    position: relative;
+    min-height: calc(100vh - 80px); /* header çakışması çözümü */
     display: flex;
     align-items: center;
     text-align: center;
+    color: #fff;
+
+    background-image:
+        linear-gradient(rgba(26, 42, 108, 0.65), rgba(26, 42, 108, 0.65)),
+        url("https://image2url.com/r2/default/images/1770467499425-daf2095f-12c4-4add-a35a-f3b998b96870.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
 }
 
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
 }
 
 .cta-button {
@@ -90,9 +102,14 @@ header nav ul li a {
     color: #fff;
     padding: 15px 30px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 30px;
     margin-top: 20px;
-    font-weight: bold;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background: #e65f00;
 }
 
 /* Brands Area */
@@ -108,7 +125,7 @@ header nav ul li a {
 }
 
 /* Sections */
-section {
+section:not(.hero) {
     padding: 80px 0;
 }
 
@@ -142,37 +159,4 @@ footer {
     padding: 50px 0;
 }
 
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
-}
-
-.footer-col h4 {
-    margin-bottom: 20px;
-}
-
-.footer-col ul {
-    list-style: none;
-}
-
-.footer-col a {
-    color: #ccc;
-    text-decoration: none;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    header .logo, header nav {
-        float: none;
-        text-align: center;
-        display: block;
-    }
-    header nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-    .hero h1 {
-        font-size: 2rem;
-    }
-}
+.footer-
