@@ -162,8 +162,10 @@ footer {
 }
 
 .logo-area img {
-    height: 45px;
+    height: 40px;      
+    max-height: 40px;
     width: auto;
+    object-fit: contain;
 }
 
 .logo-text {
