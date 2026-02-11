@@ -28,10 +28,10 @@ header {
     z-index: 1000;
 }
 
-header .logo {
+.logo {
     float: left;
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 250px;
     color: #1a2a6c;
 }
 
