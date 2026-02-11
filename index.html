@@ -3,90 +3,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Güneri Teknik | Menemen, Foça, Aliağa Kombi Yetkili Servisi</title>
+    <title>Güneri Teknik | Menemen-Foça-Aliağa Kombi Servisi</title>
+
+    <!-- NOT: Harici CSS aynen korunuyor -->
     <link rel="stylesheet" href="style.css">
-    <link href="https://hizliresim.com/ip7kf3n" rel="stylesheet">
+
+    <!-- Güvenlik için temel meta -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
+
 <body>
 
     <header>
-        <div class="container">
-            <div class="logo">GÜNERİ <span>TEKNİK</span></div>
-            <nav>
+        <div class="container header-flex">
+            <div class="logo" style="display:flex;align-items:center;gap:10px;">
+                <img src="https://image2url.com/r2/default/images/1770486935511-1e9a1b09-0c51-48b1-b4b7-b11894935bfb.png"
+                     alt="Güneri Teknik Logo"
+                     class="site-logo">
+                <h1 style="margin:0;">GÜNERİ <span>TEKNİK</span></h1>
+            </div>
+
+            <nav class="main-nav">
                 <ul>
-                    <li><a href="#anasayfa">Anasayfa</a></li>
-                    <li><a href="#hakkimizda">Hakkımızda</a></li>
-                    <li><a href="#hizmetler">Hizmetlerimiz</a></li>
-                    <li><a href="#iletisim" class="btn-call">Hemen Ara</a></li>
+                    <li><a href="#" data-toggle="Anasayfa">Anasayfa</a></li>
+                    <li><a href="#" data-toggle="Hakkimizda">Hakkımızda</a></li>
+                    <li><a href="urunler.hmtl">Ürünler</a></li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Yedek Parça</a>
+                        <div class="dropdown-content">
+                            <a href="#" data-toggle="maktek-yed-par">MAKTEK</a>
+                            <a href="#" data-toggle="sanica-yed-par">SANICA</a>
+                        </div>
+                    </li>
+
+                    <li><a href="#iletisim">İletişim</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section id="anasayfa" class="hero">
+    <!-- HAKKIMIZDA -->
+    <section id="hakkimizda" class="toggle-section" hidden>
         <div class="container">
-            <h1>Kuzey İzmir'in Isınma Güvencesi</h1>
-            <p>Menemen, Foça ve Aliağa bölgesinde profesyonel kombi ve ısıtma çözümleri.</p>
-            <a href="tel:05000000000" class="cta-button">7/24 Teknik Destek</a>
+            <h3>Hakkımızda</h3>
+            <p>
+                Güneri Teknik olarak Menemen, Aliağa ve Foça bölgelerinde
+                kombi ve kazan arıza, bakım ve onarım hizmetleri sunuyoruz.
+            </p>
+            <button data-close class="close-btn">Kapat</button>
         </div>
     </section>
 
-    <section class="brands">
+    <!-- MAKTEK -->
+    <section id="maktek-ozel" class="toggle-section" hidden>
         <div class="container">
-            <p>Yetkili Servis: <span>Maktek | Sanica | Dizayn | Hexel | Ariston</span></p>
+            <h2>Maktek Ürün Grupları</h2>
+
+            <div class="product-card">
+                <img src="https://maktek.com.tr/tr/wp-content/uploads/2023/09/omegalcd1.jpg"
+                     alt="Maktek Omega">
+                <h4 class="product-link"
+                    data-title="Maktek Omega LCD Elektrikli Kombi"
+                    data-features="Elektrikli kombi – sessiz ve ekonomik.">
+                    Omega LCD Elektrikli Kombi ▸
+                </h4>
+            </div>
+
+            <button data-close class="close-btn">Paneli Kapat</button>
         </div>
     </section>
 
-    <section id="hakkimizda" class="about">
+    <!-- SANICA -->
+    <section id="sanica-ozel" class="toggle-section" hidden>
         <div class="container">
-            <h2>Hakkımızda</h2>
-            <p>Güneri Teknik olarak; Menemen, Foça ve Aliağa bölgelerindeki komşularımıza en kaliteli ısıtma ve soğutma hizmetini sunuyoruz. Sertifikalı ve yetkin ekibimizle, şeffaf fiyat politikası ve garantili işçilik sağlıyoruz.</p>
+            <h2>Sanica Ürün Grupları</h2>
+
+            <div class="product-card">
+                <img src="https://www.sanicaisi.com.tr/wp-content/uploads/2019/07/kral-kombi-1024x995.jpg"
+                     alt="Sanica Kral">
+                <h4 class="product-link"
+                    data-title="Sanica Kral Yoğuşmalı Kombi"
+                    data-features="Tam yoğuşmalı, yüksek verim.">
+                    Kral Yoğuşmalı ▸
+                </h4>
+            </div>
+
+            <button data-close class="close-btn">Paneli Kapat</button>
         </div>
     </section>
 
-    <section id="hizmetler" class="services">
+    <!-- MARKALAR -->
+    <section id="markalar-bolumu" class="toggle-section" hidden>
         <div class="container">
-            <h2>Hizmetlerimiz</h2>
-            <div class="service-grid">
-                <div class="service-card">
-                    <h3>Kombi Bakımı</h3>
-                    <p>Yıllık periyodik bakımlarla yakıt tasarrufu ve uzun ömür.</p>
+            <h3>Hizmet Verdiğimiz Markalar</h3>
+            <p>SANICA • DİZAYN • ARISTON • HEXEL</p>
+            <button data-close class="close-btn">Kapat</button>
+        </div>
+    </section>
+
+    <!-- MODAL -->
+    <div id="productModal" class="modal" hidden>
+        <div class="modal-content">
+            <span id="modalClose" class="close-modal">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalBody"></p>
+            <a id="modalWaBtn"
+               class="btn whatsapp"
+               target="_blank"
+               rel="noopener noreferrer">
+                WhatsApp’tan Fiyat Al
+            </a>
+        </div>
+    </div>
+    <section id="iletisim-form" class="contact-section">
+        <div class="container">
+            <h2>Servis Talep / İletişim Formu</h2>
+
+            <form id="contactForm" method="POST" action="/api/contact">
+
+                <!-- Honeypot (BOT TUZAĞI) -->
+                <div style="display:none;">
+                    <label>Website</label>
+                    <input type="text" name="website">
                 </div>
-                <div class="service-card">
-                    <h3>Arıza & Onarım</h3>
-                    <p>Orijinal yedek parça ile hızlı ve garantili tamir hizmeti.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Petek Temizliği</h3>
-                    <p>Özel makine ve ilaçlarla %30'a varan ısı artışı.</p>
-                </div>
-            </div>
+
+                <label>
+                    Ad Soyad
+                    <input type="text" name="name" required minlength="3">
+                </label>
+
+                <label>
+                    Telefon
+                    <input type="tel" name="phone" required pattern="[0-9]{10,11}">
+                </label>
+
+                <label>
+                    Kombi Markası / Mesajınız
+                    <textarea name="message" required minlength="10"></textarea>
+                </label>
+
+                <label class="kvkk-check">
+                    <input type="checkbox" required>
+                    KVKK Aydınlatma Metni’ni okudum ve kabul ediyorum
+                </label>
+
+                <!-- Zaman damgası -->
+                <input type="hidden" name="formTime" id="formTime">
+
+                <button type="submit">Gönder</button>
+            </form>
+
+            <p id="formStatus" class="form-status"></p>
         </div>
     </section>
 
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-col">
-                <h4>Güneri Teknik</h4>
-                <p><a href="#">KVKK Politikası</a></p>
-                <p>© 2026 Tüm Hakları Saklıdır.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Hizmet Bölgeleri</h4>
-                <ul>
-                    <li>Menemen</li>
-                    <li>Foça</li>
-                    <li>Aliağa</li>
-                </ul>
-            </div>
-            <div id="iletisim" class="footer-col">
-                <h4>İletişim</h4>
-                <p>📍 Menemen, İzmir</p>
-                <p>📞 0500 000 00 00</p>
-                <p>📧 info@guneriteknik.com</p>
-            </div>
+    <!-- FOOTER -->
+    <footer id="iletisim">
+        <div class="container">
+            <p>📍 Menemen – Aliağa – Foça</p>
+            <p>📞 0232 831 44 14 </p>
+            <p>📞 0537 618 33 44</p>
+            <p>
+                <a href="https://tinyurl.com/Guneriteknik"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    🚗 Yol Tarifi Al
+                </a>
+            </p>
         </div>
     </footer>
+
+    <!-- ===================== -->
+    <!-- GÜVENLİ TEK JS BLOĞU -->
+    <!-- ===================== -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            // Section aç/kapat
+            document.querySelectorAll("[data-toggle]").forEach(el => {
+                el.addEventListener("click", e => {
+                    e.preventDefault();
+                    toggleSection(el.dataset.toggle);
+                });
+            });
+
+            document.querySelectorAll("[data-close]").forEach(btn => {
+                btn.addEventListener("click", closeAllSections);
+            });
+
+            function toggleSection(id) {
+                closeAllSections();
+                const el = document.getElementById(id);
+                if (el) {
+                    el.hidden = false;
+                    el.scrollIntoView({ behavior: "smooth" });
+                }
+            }
+
+            function closeAllSections() {
+                document.querySelectorAll(".toggle-section")
+                    .forEach(s => s.hidden = true);
+            }
+
+            // Dropdown
+            document.querySelectorAll(".dropbtn").forEach(btn => {
+                btn.addEventListener("click", e => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    btn.parentElement.classList.toggle("active");
+                });
+            });
+
+            window.addEventListener("click", () => {
+                document.querySelectorAll(".dropdown")
+                    .forEach(d => d.classList.remove("active"));
+            });
+
+            // Modal
+            document.querySelectorAll(".product-link").forEach(p => {
+                p.addEventListener("click", () => {
+                    openModal(p.dataset.title, p.dataset.features);
+                });
+            });
+
+            const modal = document.getElementById("productModal");
+            document.getElementById("modalClose").onclick = () => modal.hidden = true;
+
+            function openModal(title, features) {
+                document.getElementById("modalTitle").textContent = title;
+                document.getElementById("modalBody").textContent = features;
+
+                const msg = encodeURIComponent(
+                    `Merhaba, ${title} hakkında bilgi alabilir miyim?`
+                );
+
+                document.getElementById("modalWaBtn").href =
+                    "https://wa.me/905376183344?text=" + msg;
+
+                modal.hidden = false;
+            }
+
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const form = document.getElementById("contactForm");
+            const status = document.getElementById("formStatus");
+            const formTimeInput = document.getElementById("formTime");
+
+            // Formun açıldığı zamanı kaydet
+            const formLoadedAt = Date.now();
+            formTimeInput.value = formLoadedAt;
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                // 1️⃣ Honeypot kontrolü
+                if (form.website.value !== "") {
+                    return; // BOT → sessizce yok say
+                }
+
+                // 2️⃣ Çok hızlı gönderim kontrolü (bot)
+                const now = Date.now();
+                if (now - formLoadedAt < 4000) {
+                    status.textContent = "Form çok hızlı gönderildi.";
+                    return;
+                }
+
+                // 3️⃣ Manuel POST (ileride backend hazır)
+                const formData = new FormData(form);
+
+                fetch(form.action, {
+                    method: "POST",
+                    body: formData
+                })
+                    .then(() => {
+                        status.textContent = "Talebiniz alındı. En kısa sürede dönüş yapılacaktır.";
+                        form.reset();
+                    })
+                    .catch(() => {
+                        status.textContent = "Bir hata oluştu, lütfen tekrar deneyin.";
+                    });
+
+            });
+
+        });
+    </script>
 
 </body>
 </html>
