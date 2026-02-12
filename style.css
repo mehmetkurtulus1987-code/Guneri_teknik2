@@ -28,8 +28,8 @@ header {
 }
 
 .logo-area img {
-    width: 150px;
-    height: auto;
+    width: auto;
+    height: 60px;
 }
 
 .logo-area span {
