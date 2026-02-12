@@ -28,10 +28,8 @@ header {
 }
 
 .logo-area img {
-    float: left;
-    font-size: 24px;
-    font-weight: auto;
-    color: #1a2a6c;
+    width: 150px;
+    height: auto;
 }
 
 .logo-area span {
