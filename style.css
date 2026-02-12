@@ -27,7 +27,7 @@ header {
     z-index: 1000;
 }
 
-header .logo {
+.logo-area {
     float: left;
     font-size: 24px;
     font-weight: 200;
