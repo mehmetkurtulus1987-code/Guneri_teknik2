@@ -28,15 +28,21 @@ header {
     z-index: 1000;
 }
 
-header .site-logo {
-    float: left;
-    font-size: 10px;
-    font-weight: bold;
-    color: #1a2a6c;
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
-header .logo span {
-    color: #f06105;
+.site-logo {
+    height: 55px;
+    width: auto;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.site-logo:hover {
+    transform: scale(1.05);
 }
 
 header nav {
