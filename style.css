@@ -28,7 +28,7 @@ header {
     z-index: 1000;
 }
 
-.site-logo {
+header .site-logo {
     float: left;
     font-size: 10px;
     font-weight: bold;
